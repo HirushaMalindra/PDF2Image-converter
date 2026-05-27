@@ -15,4 +15,12 @@ def pdf_to_img(pdf_path, output_folder):
 
     pdf_document.close()
 
-    
+  if __name__ == "__main__":
+# you can give any PDF file path and output folder path here
+    pdf_path = r"E:\Users\User\Downloads\Example.pdf" # just a example path, change it to your actual PDF file path
+    output_folder = r"E:\Users\User\Pictures\output_images" # just a example path, change it to your desired output folder path
+
+    if os.path.exists(pdf_path):
+        pdf_to_img(pdf_path, output_folder)  
+    else:
+        print(f"Error: The file {pdf_path} does not exist. Please check the path and try again.")      
